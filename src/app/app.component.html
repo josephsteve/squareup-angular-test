@@ -1,7 +1,72 @@
-<form id="payment-form">
-
-  <div id="card-container"></div>
-
-  <button id="card-button" type="button" (click)="requestCardNonce($event)">Pay</button>
-
-</form>
+<div class="container">
+  <form id="payment-form" [formGroup]="paymentForm">
+    <div class="table">
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="Enter Your First Name" formControlName="firstName">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Enter Your Last Name" formControlName="lastName">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Enter Your Address" formControlName="street">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="Enter Your City" formControlName="city">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>State</mat-label>
+            <input matInput placeholder="Enter Your State" formControlName="state">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Zipcode</mat-label>
+            <input matInput placeholder="Enter Your Zipcode" formControlName="zip">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="card-container"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Order Number</mat-label>
+            <input matInput placeholder="Order Number" formControlName="orderNumber">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline">
+            <mat-label>Amount</mat-label>
+            <input matInput placeholder="Enter the Amount" formControlName="amount">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button id="card-button" mat-raised-button color="primary" type="button" (click)="requestCardNonce($event)">Pay</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
