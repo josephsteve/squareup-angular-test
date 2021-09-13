@@ -55,7 +55,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         state: this.paymentForm.value.state,
         zip: this.paymentForm.value.zip,
         orderNumber: this.paymentForm.value.orderNumber,
-        amount: this.paymentForm.value.amount,
+        amount: this.paymentForm.value.amount * 100,
         token: result.token
       }).subscribe(resp => console.log(resp));
 

@@ -6,6 +6,6 @@ export class PaymentFormDto {
   state: string | undefined;
   zip: string | undefined;
   orderNumber: string | undefined;
-  amount: bigint | undefined;
+  amount: number | undefined;
   token: string | undefined;
 }
